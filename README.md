@@ -31,6 +31,8 @@
 
 ### Задание 1 — Миграции
 
+Форкните шаблон [ Laravel 13 ](https://github.com/31ISR/laravel-template) с названием как у этой лабораторной и ваша фамилия
+
 ```bash
 # Выполните команды для создания миграций:
 # 1. Миграция для добавления поля role в таблицу users
@@ -123,32 +125,7 @@ abstract class Controller
 
 ---
 
-### Задание 4 — Middleware
-
-```bash
-# Создайте AdminMiddleware командой artisan
-```
-
-```php
-// app/Http/Middleware/AdminMiddleware.php
-public function handle(Request $request, Closure $next): Response
-{
-    // TODO: проверьте что пользователь залогинен И является администратором
-    // Подсказка: используйте $this->currentUser()? Нет — здесь не контроллер.
-    // Используйте Auth фасад и instanceof User
-    // При отказе — abort с правильным кодом ошибки
-}
-```
-
-```php
-// bootstrap/app.php
-// TODO: зарегистрируйте алиас 'admin' для AdminMiddleware
-// TODO: добавьте trustProxies если работаете в Codespaces
-```
-
----
-
-### Задание 5 — Policy
+### Задание 4 — Policy
 
 ```bash
 # Создайте BookPolicy для модели Book
@@ -175,7 +152,7 @@ public function delete(User $user, Book $book): bool
 
 ---
 
-### Задание 6 — Контроллеры авторизации
+### Задание 5 — Контроллеры авторизации
 
 ```bash
 # Создайте три контроллера:
@@ -232,7 +209,7 @@ public function __invoke(Request $request): RedirectResponse
 
 ---
 
-### Задание 7 — DashboardController
+### Задание 6 — DashboardController
 
 ```php
 // app/Http/Controllers/DashboardController.php
@@ -255,7 +232,7 @@ public function index(): View
 
 ---
 
-### Задание 8 — GenreController
+### Задание 7 — GenreController
 
 ```bash
 # Создайте GenreController
